@@ -1,0 +1,21 @@
+O exceptie este o situatie/eveniment care apare in timpul rularii unui program. Cand apare o exceptie, flowul normal al programului este intrerupt. Unele exceptii modifica comportamentul programului
+si de acea trebuie tratate.
+
+Sunt 2 tipuri de exceptii in java:
+Checked Exeptions vs Unchecked Exceptions
+
+Checked Exceptions = sunt verificare de catre complicator la compile time si nu pot fi ignorate, deci trebuie sa le tratam
+Checked Exceptions = Toate exceptiile care mostenesc direct Exception
+
+Unchecked Exceptions = sunt exceptii care nu sunt verificate de compilator, sunt trecute cu vederea si putem porni programului fara ale trata
+Unchecked Exceptions = toate exceptiile care mostenesc direct RuntimeException. (RuntimeException mosteneste Exception)
+
+Cum tratam o exceptie in java?
+Le tratam cu un block de tip try / catch / finally (blocul finally se executa indiferent daca exceptia a fost prinsa sau nu)
+Putem avea mai multe blocuri de tip catch, singura conditie este ca exceptiile sa fie asezate una sub alta, de la cea mai specifica la cea mai generala.
+
+
+Erorile = sunt probleme care apar si trebuie tratate de catre programator (OutOfMemoryError)
+
+In cadrul exceptiilor mai avem si throws care este folosit pe semnatura unei metode pentru a arunca mai departe o exceptie fara sa o tratam in cadrul metodei
+Mai avem si throws care se foloste in cadrul unei metode si se creaza o noua instanta de exceptie
